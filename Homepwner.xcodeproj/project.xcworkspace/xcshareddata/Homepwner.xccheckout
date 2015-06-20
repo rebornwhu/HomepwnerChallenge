@@ -12,20 +12,24 @@
 	<dict>
 		<key>49808E0255BB72325546A151CD7C62197B948030</key>
 		<string>https://github.com/rebornwhu/Homepwner.git</string>
+		<key>68C54A457FF6A3F19BB50EE148142E8A720F916D</key>
+		<string>https://github.com/rebornwhu/HomepwnerChallenge.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>Homepwner.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>49808E0255BB72325546A151CD7C62197B948030</key>
+		<string>../../../Homepwner</string>
+		<key>68C54A457FF6A3F19BB50EE148142E8A720F916D</key>
 		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://github.com/rebornwhu/Homepwner.git</string>
+	<string>https://github.com/rebornwhu/HomepwnerChallenge.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>49808E0255BB72325546A151CD7C62197B948030</string>
+	<string>68C54A457FF6A3F19BB50EE148142E8A720F916D</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
@@ -35,6 +39,14 @@
 			<string>49808E0255BB72325546A151CD7C62197B948030</string>
 			<key>IDESourceControlWCCName</key>
 			<string>Homepwner</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>68C54A457FF6A3F19BB50EE148142E8A720F916D</string>
+			<key>IDESourceControlWCCName</key>
+			<string>HomepwnerChallenge</string>
 		</dict>
 	</array>
 </dict>
