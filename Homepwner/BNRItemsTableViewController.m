@@ -56,9 +56,9 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     if (section == 0)
-        return [[[BNRItemStore sharedStore] allItemsUnder50] count];
+        return [[[BNRItemStore sharedStore] allItemsUnder50] count] + 1;
     else
-        return [[[BNRItemStore sharedStore] allItemsEqualAbove50] count];
+        return [[[BNRItemStore sharedStore] allItemsEqualAbove50] count] + 1;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -70,15 +70,26 @@
     
     if (indexPath.section == 0) {
         NSArray *items = [[BNRItemStore sharedStore] allItemsUnder50];
-        cell.textLabel.text = [items[indexPath.row] description];
-        return cell;
+        if (indexPath.row < [items count]) {
+            cell.textLabel.text = [items[indexPath.row] description];
+            return cell;
+        }
+        else {
+            cell.textLabel.text = @"No more items!";
+            return cell;
+        }
     }
     else {
         NSArray *items = [[BNRItemStore sharedStore] allItemsEqualAbove50];
-        cell.textLabel.text = [items[indexPath.row] description];
-        return cell;
+        if (indexPath.row < [items count]) {
+            cell.textLabel.text = [items[indexPath.row] description];
+            return cell;
+        }
+        else {
+            cell.textLabel.text = @"No more items!";
+            return cell;
+        }
     }
-    
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
