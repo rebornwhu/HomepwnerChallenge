@@ -68,28 +68,24 @@
     
     NSLog(@"section is %ld and row is %ld", (long)indexPath.section, (long)indexPath.row);
     
+    NSString *message = [[NSString alloc] init];
     if (indexPath.section == 0) {
         NSArray *items = [[BNRItemStore sharedStore] allItemsUnder50];
-        if (indexPath.row < [items count]) {
-            cell.textLabel.text = [items[indexPath.row] description];
-            return cell;
-        }
-        else {
-            cell.textLabel.text = @"No more items!";
-            return cell;
-        }
+        if (indexPath.row < [items count])
+            message = [items[indexPath.row] description];
+        else
+            message = @"No more items!";
     }
     else {
         NSArray *items = [[BNRItemStore sharedStore] allItemsEqualAbove50];
-        if (indexPath.row < [items count]) {
-            cell.textLabel.text = [items[indexPath.row] description];
-            return cell;
-        }
-        else {
-            cell.textLabel.text = @"No more items!";
-            return cell;
-        }
+        if (indexPath.row < [items count])
+            message = [items[indexPath.row] description];
+        else
+            message = @"No more items!";
     }
+    
+    cell.textLabel.text = message;
+    return cell;
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
